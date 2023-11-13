@@ -7,5 +7,7 @@ for line in sys.stdin:
     parts = line.split()  # Split the line into parts based on spaces
     user_id = parts[2]  # Extract the user id
     url = parts[3]  # Extract the URL
-    print '%s,%s\t%s' % (url,user_id, 1)
+    if url.endswith('.ps"'):
+        print 'user:%s\t%s' % (user_id, 1)
+    print 'url:%s\t%s' % (url, 1)
 
