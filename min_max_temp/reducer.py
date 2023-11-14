@@ -2,7 +2,7 @@
 import sys
 max_temp = 27
 min_temp = -1
-current_station = "A"
+current_station = ""
 for line in sys.stdin:
     data = line.split()
     name = data[0]
@@ -20,3 +20,4 @@ for line in sys.stdin:
     if value2 < min_temp:
         min_temp = value2
 print '%s\t%s\t%s' % (current_station, max_temp,min_temp)
+

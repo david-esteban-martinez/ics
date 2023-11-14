@@ -10,11 +10,11 @@ wine_type = "red"
 
 # input comes from STDIN
 for line in sys.stdin:
-    if wine_type_new != wine_type:
-        wine_type = wine_type_new
-        number_of_wines = 0
-    # remove leading and trailing whitespace
-    number_of_wines += 1
+    # if current_key != wine_type:
+    #     wine_type = wine_type_new
+    #     number_of_wines = 0
+    # # remove leading and trailing whitespace
+    # number_of_wines += 1
     line = line.strip()
 
     # parse the input we got from mapper.py
@@ -43,4 +43,4 @@ for line in sys.stdin:
 # do not forget to output the last word if needed!
 if current_key == key:
     current_count = current_count/number_of_wines
-    print '%s\t%s' % (current_word, current_count)
+    print '%s\t%s' % (current_key, current_count)
