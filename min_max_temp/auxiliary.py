@@ -1,7 +1,7 @@
 import os
 
 if __name__ == '__main__':
-    folder = "salida_temp10"
+    folder = "salida_tempx4"
     max_temp1 = 27
     min_temp2 = -1
     max_name = None

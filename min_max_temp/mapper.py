@@ -5,11 +5,8 @@ import sys
 # Directorio con los archivos de temperaturas
 # Vamos linea a linea imprimiendo por stdout las temperaturas
 for line in sys.stdin:
-    # file_name = os.environ['map_input_file']
-    try:
-        file_name = os.environ['mapreduce_map_input_file']
-    except KeyError:
-        file_name = os.environ['map_input_file']
+    file_name = os.environ['mapreduce_map_input_file']
+    # print(file_name)
     data = line.split()
     temp1 = float(data[5])
     temp2 = float(data[6])
@@ -18,7 +15,9 @@ for line in sys.stdin:
     if temp2 > 100 or temp2 < -100:
         data[6] = "0"
     # name=name[2].split('.')[0]
-    # s1 = file_name.split('/')
-    # file_name = s1[-1]
+
+    s1 = file_name.split('/')
+    file_name = s1[-1]
+    file_name=file_name.split('-')[2].split('.')[0]
 
     print '%s\t%s\t%s' % (file_name, data[5], data[6])
